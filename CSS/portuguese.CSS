@@ -1,0 +1,95 @@
+.portugueseUI{
+    
+    width: 85vw;
+    position: fixed;
+    height: 88vh;
+    overflow-y: scroll;
+    padding: 0px 18px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: 0;
+    color:white;
+    font-family: 'Archivo', sans-serif; 
+    top:65px;
+    display: none;
+}
+
+/*SAIR ANIMAÇÃO do ecrã das subcategorias*/
+.portugueseUIanim{
+    animation: portugueseUIanim 2100ms forwards 200ms;
+    transition: ease;
+}
+
+@keyframes portugueseUIanim {
+    0% {
+        top:65px;
+    }
+    100% {
+        top:1000px;
+        display: none;
+    }
+}
+
+
+/*Esconder Barr Scroll*/
+.portugueseUI::-webkit-scrollbar {
+  display: none;
+    width: 0 !important 
+}
+
+
+.portugueseUI h2{
+     margin-top:50px;
+    font-weight: 100;
+    font-size: 30px;
+    letter-spacing: 0.2px;
+    text-align: center;
+    display: none;
+}
+
+.portugueseComponents{
+    -webkit-backdrop-filter: blur(30px);
+    backdrop-filter: blur(30px);
+     box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+    padding-left: 35px;
+    padding-bottom: 5px;
+    padding-top:1px;
+    margin-bottom: 20px;
+    display: none;
+}
+
+.portugueseComponents:last-child{
+    margin-bottom: 140px;
+}
+
+.soundIcon{
+/*
+    width: 30px;
+    position: absolute;
+    right: 20px;
+    line-height: 10px;
+    display: inline-block;
+    height: 100%;
+*/
+    width: 30px;
+    position: relative;
+    float: right;
+    right: 25px;
+    top: 35px;
+}
+
+.wordEN{
+    font-weight: 300;
+    font-size: 24px;
+    margin-bottom: -15px;
+   
+}
+
+.wordPT{
+    font-weight: 100;
+    font-size: 18px;
+    opacity: 0.6;
+  
+}

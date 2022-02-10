@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Hide Searchbar-->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <!--Favicon-->
+    <link rel="shortcut icon" type="image/png" href="Assets/favicon/favicon.ico"/>
+    <!--Favicon for Mobile-->
+    <link rel="apple-touch-icon" sizes="180x180" href="Assets/favicon/apple-touch-icon.png">
+    <!--Login CSS-->
+    <link rel="stylesheet" href="CSS/login.css">
+    <!--Homepage CSS-->
+    <link rel="stylesheet" href="CSS/Index.css">
+    <!--New Post CSS-->
+    <link rel="stylesheet" href="CSS/newPost.css">
+    <!--Accommodation CSS-->
+    <link rel="stylesheet" href="CSS/accommodation.css">
+    <!--GRI CSS-->
+    <link rel="stylesheet" href="CSS/GRI.css">
+     <!--Portuguese CSS-->
+    <link rel="stylesheet" href="CSS/portuguese.CSS">
+    <!-- import jquery -->
+    <script src="Libraries/jquery-3.6.0.min.js"></script>
+	<!-- import javascript file -->
+	<script src="Script/script.js" defer></script>
+    <title>InterAlumni</title>
+</head>
+
+<body>
+    
+    <img src="Assets/backArrow.svg" class="backArrow" id="goBack">
+    
+    <img src="Assets/bg.jpg" class="fundo">
+    
+    
+    <div class="searchBarContainer">
+        <img src="Assets/ICON-Search-white.svg" class="whiteSearchIcon">
+        <input placeholder="" class="searchBar" id="searchInput"/>
+    </div>
+
+    <!--Logo InterAlumni-->
+    <img src="Assets/IA.svg" id="logo">
+    
+    <!--Login Section-->
+    <div class="logInSection">
+        <!--Student ID-->
+		<input placeholder="Student ID" class="input" id="studentIDInput"/>
+        <!--Password-->
+        <input type="password" placeholder="Password" class="input" id="passwordInput"/>
+        <!--See Password-->
+        <img src="Assets/seePassword.svg" id="seePass">
+        <!--Remember User-->
+        <div class="rememberMe">
+            <input type="checkbox" id="rememberCheck">
+            <span class="remember">Remember me</span>
+        </div>
+        
+        <!--Sign In Button-->
+		<button id="signInButton">sign in</button>
+        <!--Sign Up Button-->
+        <button id="signUpButton">sign up</button>
+        <span class="forgot">Forgot password?</span>
+    </div>
+        
+        <!--Barra com Logo-->
+    <div class="appTitle"></div>
+        
+        <!--Contentor com HotTopics-->
+    <div class="hotTopicsContainer">
+       
+        <!--Hot Topics-->
+        <h2 id="hotTopics">hot topics</h2>
+        
+        <!--Scrollable Wrapper-->
+        <div class="scrollTopicsContainer">
+            <!--Hot Topics Posts GROUP-->
+            <div class="insideScrollTopicsContainer">
+                
+                <div class="hotTopicContent">
+                    <div class="topicCategory">Erasmus Events</div>
+                    <img src="Assets/HotTopic1.png" alt="Erasmus Event Image" class="hotTopicImage">
+                    <div class="topicText">
+                        <h3 class="topicTitle">Sneaky Drinks...</h3>
+                        <p class="topicPostText">Make new friends over some wine and cocktails in our #SneakyDrinks event to a funky sound...</p>
+                    </div>           
+                </div>
+        
+                <div class="hotTopicContent">
+                    <div class="topicCategory">Cultural Events</div>
+                    <img src="Assets/Posts/HotPosts2.png" alt="Erasmus Event Image" class="hotTopicImage">
+                    <div class="topicText">
+                        <h3 class="topicTitle">Picaria Pub Quiz</h3>
+                        <p class="topicPostText">There will be a Pub Quiz at Fabrica Picaria on Wednesday.It's free to play, there are prizes...</p>
+                    </div>           
+                 </div>
+        
+         <div class="hotTopicContent">
+            <div class="topicCategory">Erasmus Events</div>
+            <img src="Assets/Posts/HotPosts3.jpg" alt="Erasmus Event Image" class="hotTopicImage">
+            <div class="topicText">
+                 <h3 class="topicTitle">International Fri...</h3>
+                 <p class="topicPostText">**Thursday** we'll meet from 20:30h at one of the best breweries in Porto, where we'll have...</p>
+            </div>           
+        </div>
+                
+                  <div class="hotTopicContent">
+            <div class="topicCategory">Cultural Events</div>
+            <img src="Assets/Posts/HotPosts4.jpg" alt="Erasmus Event Image" class="hotTopicImage">
+            <div class="topicText">
+                 <h3 class="topicTitle">A Metamorfose ...</h3>
+                 <p class="topicPostText">20th January — 16th February. Mupi Gallery art exhibit by Celine Marie, free entrance...
+</p>
+            </div>           
+        </div>
+            </div>
+        
+        </div>
+    </div>
+    
+<!--Categorias-->
+    <div class="categoriasContentor">
+        
+        <div class="categorias" id="FacultySpace">
+            <img src="Assets/FacultySpace.png" alt="" class="imagemCategoria" id="FacultySpaceTap">
+            <img src="Assets/Star.svg" class="estrelaFav">
+            <div class="tituloCategoria">Faculty<br>Space</div>
+       
+        </div>
+        <div class="categorias" id="ErasmusSpace">
+            <img src="Assets/ErasmusSpace.png" alt="" class="imagemCategoria">
+            <img src="Assets/Star.svg" class="estrelaFav">
+            <div class="tituloCategoria">Erasmus<br>Space</div>
+        </div>
+        <div class="categorias" id="AcademicParties">
+            <img src="Assets/AcademicParties.png" alt="" class="imagemCategoria">
+            <img src="Assets/Star.svg" class="estrelaFav">
+            <div class="tituloCategoria">Academic<br>Parties</div>
+        </div>
+        <div class="categorias" id="ErasmusEvents">
+            <img src="Assets/ErasmusEvents.png" alt="" class="imagemCategoria">
+            <img src="Assets/Star.svg" class="estrelaFav">
+            <div class="tituloCategoria">Erasmus<br>Events</div>
+        </div>
+        <div class="categorias" id="Spots">
+            <img src="Assets/Spots.png" alt="" class="imagemCategoria">
+            <img src="Assets/Star.svg" class="estrelaFav">
+            <div class="tituloCategoria">Spots</div>
+        </div>
+        <div class="categorias" id="NightLife">
+            <img src="Assets/NightLife.png" alt="" class="imagemCategoria">
+            <img src="Assets/Star.svg" class="estrelaFav">
+            <div class="tituloCategoria">Night<br>Life</div>
+        </div>
+        <div class="categorias" id="FleaMarkets">
+            <img src="Assets/FleaMarkets.png" alt="" class="imagemCategoria">
+            <img src="Assets/Star.svg" class="estrelaFav">
+            <div class="tituloCategoria">Flea<br>Markets</div>
+        </div>
+        <div class="categorias" id="IRO">
+            <img src="Assets/IRO.png" alt="" class="imagemCategoria" id="IROtap">
+            <img src="Assets/Star.svg" class="estrelaFav">
+            <div class="tituloCategoria">International<br>Relations<br>Office</div>
+        </div>
+        <div class="categorias" id="Accommodation">
+            <img src="Assets/Accommodation.png" alt="" class="imagemCategoria" id="AccommodationTap">
+            <img src="Assets/Star.svg" class="estrelaFav">
+            <div class="tituloCategoria">Accommodation</div>
+        </div>
+        <div class="categorias" id="CulturalEvents">
+            <img src="Assets/CulturalEvents.png" alt="" class="imagemCategoria">
+            <img src="Assets/Star.svg" class="estrelaFav">
+            <div class="tituloCategoria">Cultural<br>Events</div>
+        </div>
+        <div class="categorias" id="CheapTravels">
+            <img src="Assets/CheapTravels.png" alt="" class="imagemCategoria">
+            <img src="Assets/Star.svg" class="estrelaFav">
+            <div class="tituloCategoria">Cheap<br>Travels</div>
+        </div>
+        <div class="categorias" id="Food">
+            <img src="Assets/Food.png" alt="" class="imagemCategoria">
+            <img src="Assets/Star.svg" class="estrelaFav">
+            <div class="tituloCategoria">Food</div>
+        </div>
+        <div class="categorias" id="Covid">
+            <img src="Assets/Covid.png" alt="" class="imagemCategoria">
+            <img src="Assets/Star.svg" class="estrelaFav">
+            <div class="tituloCategoria">Covid</div>
+        </div>
+        <div class="categorias" id="Portuguese">
+            <img src="Assets/Portuguese.png" alt="" class="imagemCategoria" id="PortugueseTap">
+            <img src="Assets/Star.svg" class="estrelaFav">
+            <div class="tituloCategoria">Portuguese</div>
+        </div>
+        <div class="categorias" id="MoveAround">
+            <img src="Assets/MoveAround.png" alt="" class="imagemCategoria">
+            <img src="Assets/Star.svg" class="estrelaFav">
+            <div class="tituloCategoria">Move<br>Arouns</div>
+        </div>
+        <div class="categorias" id="NationalHolidays">
+            <img src="Assets/NationalHolidays.png" alt="" class="imagemCategoria">
+            <img src="Assets/Star.svg" class="estrelaFav">
+            <div class="tituloCategoria">National<br>Holidays</div>
+        </div>
+        <div class="categorias" id="HealthPapers">
+            <img src="Assets/HealthPapers.png" alt="" class="imagemCategoria">
+            <img src="Assets/Star.svg" class="estrelaFav">
+            <div class="tituloCategoria">Health<br>Papers</div>
+        </div>
+        <div class="categorias" id="SurpriseBox">
+            <img src="Assets/SurpriseBox.png" alt="" class="imagemCategoria">
+            <img src="Assets/Star.svg" class="estrelaFav">
+            <div class="tituloCategoria">Surprise<br>Box</div>
+        </div>
+    </div>
+   
+    
+<!--Circulo por trás do "+" -->
+    <div class="circleAnimation" id="newPost"></div>
+    
+<!--    LightBoxEffect-->
+    <div class="lightBoxEffect"></div>
+    
+    
+    
+<!--Bottom Menu-->
+    <div class="menu">
+    <img src="Assets/MenuBar.svg" id="bottomMenu">
+        <img src="Assets/PlusButton.svg" class="plusIcon" id="">
+        <img src="Assets/ICON-HomeSelected.svg" class="menuIcon" id="homeIcon">
+        <img src="Assets/ICON-Favourites.svg" class="menuIcon" id="favouritesIcon">
+        <img src="Assets/ICON-Search.svg" class="menuIcon" id="searchIcon">
+        <img src="Assets/ICON-Profile.svg" class="menuIcon" id="profileIcon">
+    </div>
+    
+    
+<!--    UI para nova publicação-->
+    <div class="newPostUI">
+        <div class="topSelection">
+            <div class="custom-select">
+                <select>
+                    <option value="0">Category</option>
+                    <option value="1">Academic Parties</option>
+                    <option value="2">Cheap Travels</option>
+                    <option value="3">Cultural Events</option>
+                    <option value="4">Erasmus Space</option>
+                    <option value="5">Erasmus Events</option>
+                    <option value="6">Faculty Space</option>
+                    <option value="7">Flea Markets</option>
+                    <option value="8">Food</option>
+                    <option value="9">Night Life</option>
+                    <option value="10">Spots</option>
+                </select>
+            </div>
+<!--Cruz para sair-->
+            <div class="crossBox">
+                <img src="Assets/Cross.svg" id="cross">
+            </div>
+        </div>  
+<!-- Titulo do Post-->
+        <input placeholder="Title" class="newPostTitle" id="tituloDoPost"/>
+        <!-- Mensagem do Post-->
+        <textarea placeholder="Message" class="newPostMessage" id="mensagemDoPost"></textarea>
+        <img src="Assets/addImage.svg" id="addImage">
+<!--<input placeholder="Message" class="newPostMessage"/>-->
+        <button class="postPost">post</button>
+    </div>
+    
+<!--Mensagem Feedback de novo Post-->
+    <div class="postSentFeedback">
+        <img src="Assets/PostSentCheck.svg">
+        <p class="postFeedbackText">post sent</p>
+    </div>
+    
+    
+<!--    post dos maus habitos-->
+    <div class="mausHabitosSearchPostsContainer">
+        <div class="MausHabitosPost">
+            <div class="categoriaPost">cultural events</div>
+            <img src="Assets/PostImagemUm.png" class="imagemPost">
+            <p class="tituloPost">Pyrats @ Maus Hábitos</p>
+            <p class="mensagemPost">20th January — 16th February<br>Mupi Gallery art exhibit by Celine Marie, free entrance at Maus Hábitos </p>
+            <p class="dataPost">15.01.2022</p>
+            <div class="commentsContainer">
+                <img src="Assets/CommentsIcon.png" id="commentIcon">(9)
+            </div>
+            <div class="likePostContainer">
+                <img src="Assets/FavouriteButton.svg" class="favouriteIcon" >
+            </div>
+        </div>
+        
+        <div class="MausHabitosPost">
+            <div class="categoriaPost">cultural events</div>
+            <img src="Assets/Posts/Post2.png" class="imagemPost">
+            <p class="tituloPost">#obratorio</p>
+            <p class="mensagemPost">13th April<br>Art showcase at Maus Hábitos, free entrance</p>
+            <p class="dataPost">15.01.2022</p>
+            <div class="commentsContainer">
+                <img src="Assets/CommentsIcon.png" id="commentIcon">(9)
+            </div>
+            <div class="likePostContainer">
+                <img src="Assets/FavouriteButton.svg" class="favouriteIcon" >
+            </div>
+        </div>
+        
+         <div class="MausHabitosPost">
+            <div class="categoriaPost">cultural events</div>
+            <img src="Assets/Posts/Post3.png" class="imagemPost">
+            <p class="tituloPost">Comedy at the Table | Ricardo Couto + João Rua</p>
+            <p class="mensagemPost">14th February<br>Food and a laugh at Maus Hábitos<br>Starter - € 10 per person (includes 1 menu:: 1 breadzote or 1 spring pizza or 2 piadinas + 1 glass of wine or 1 fine (Trophy). All products have an omnivorous and vegetarian option).</p>
+            <p class="dataPost">15.01.2022</p>
+            <div class="commentsContainer">
+                <img src="Assets/CommentsIcon.png" id="commentIcon">(9)
+            </div>
+            <div class="likePostContainer">
+                <img src="Assets/FavouriteButton.svg" class="favouriteIcon" >
+            </div>
+        </div>
+        
+        <div class="MausHabitosPost">
+            <div class="categoriaPost">cultural events</div>
+            <img src="Assets/Posts/Post4.png" class="imagemPost">
+            <p class="tituloPost">Graphic Oscillator | Gustavo Costa + Pedro Oliveira + André Covas</p>
+            <p class="mensagemPost">17th January<br>Graphic Oscillator consists of the realization of twelve musical improvisation shows on graphic score, concretized in two cities, Porto and Vila Real, performed by six groups of two sound artists and one graphic artist and the creation of a website for sound and visual recording of the works created. Come see at Maus Hábitos.</p>
+            <p class="dataPost">15.01.2022</p>
+            <div class="commentsContainer">
+                <img src="Assets/CommentsIcon.png" id="commentIcon">(9)
+            </div>
+            <div class="likePostContainer">
+                <img src="Assets/FavouriteButton.svg" class="favouriteIcon" >
+            </div>
+        </div>
+        
+        <div class="MausHabitosPost">
+            <div class="categoriaPost">cultural events</div>
+            <img src="Assets/Posts/Post5.png" class="imagemPost">
+            <p class="tituloPost">Mupi Gallery | Vanishing Acts</p>
+            <p class="mensagemPost">17th February<br>Mupi Gallery art exhibit by Gabriela Vaz-Pinheiro, free entrance at Maus Hábitos<br>To disappear is to exist. To be an image in the eyes of others. Acts of disappearing are the impossible turn of existing in public. A body. A body that is looked at. An image that belongs to others. Fugitive and centrifugal. </p>
+            <p class="dataPost">15.01.2022</p>
+            <div class="commentsContainer">
+                <img src="Assets/CommentsIcon.png" id="commentIcon">(9)
+            </div>
+            <div class="likePostContainer">
+                <img src="Assets/FavouriteButton.svg" class="favouriteIcon" >
+            </div>
+        </div>
+        
+        <div class="MausHabitosPost">
+            <div class="categoriaPost">cultural events</div>
+            <img src="Assets/Posts/Post6.png" class="imagemPost">
+            <p class="tituloPost">Sara &amp; André Outras Conversas (other conversations)</p>
+            <p class="mensagemPost">20th January — 16th February<br>Interview at Maus Hábitos with the plastic artists Sara and André for a nice podcast</p>
+            <p class="dataPost">15.01.2022</p>
+            <div class="commentsContainer">
+                <img src="Assets/CommentsIcon.png" id="commentIcon">(9)
+            </div>
+            <div class="likePostContainer">
+                <img src="Assets/FavouriteButton.svg" class="favouriteIcon" >
+            </div>
+        </div>
+        
+        <div class="MausHabitosPost">
+            <div class="categoriaPost">cultural events</div>
+            <img src="Assets/Posts/Post7.png" class="imagemPost">
+            <p class="tituloPost">DJ Sets | Puto and Matilde Castro </p>
+            <p class="mensagemPost">11th and 12th February<br>Music at Maus Hábitos<br>Bookings: (+351) 91 678 678 7</p>
+            <p class="dataPost">15.01.2022</p>
+            <div class="commentsContainer">
+                <img src="Assets/CommentsIcon.png" id="commentIcon">(9)
+            </div>
+            <div class="likePostContainer">
+                <img src="Assets/FavouriteButton.svg" class="favouriteIcon" >
+            </div>
+        </div>
+        
+        <div class="MausHabitosPost">
+            <div class="categoriaPost">cultural events</div>
+            <img src="Assets/Posts/Post8.png" class="imagemPost">
+            <p class="tituloPost">Shuggah Lickurs Clubbing</p>
+            <p class="mensagemPost">12th February<br>For access to the event at Maus Hábitos, it is mandatory to present 1 of the following:<br>1) EU COVID-19 Digital Certificate of testing (antigen up to 48h or PCR 72h) or proof of laboratory test (antigen or PCR) with negative result;<br>2) Certificate of recovery up to 6 months;<br>3) Certificate of vaccination with a booster dose more than 14 days ago;<br>4) Self-test done at the door of the event, under staff supervision.</p>
+            <p class="dataPost">15.01.2022</p>
+            <div class="commentsContainer">
+                <img src="Assets/CommentsIcon.png" id="commentIcon">(9)
+            </div>
+            <div class="likePostContainer">
+                <img src="Assets/FavouriteButton.svg" class="favouriteIcon" >
+            </div>
+        </div>
+    </div>
+    
+    
+    
+<!--ecrã da falta de Favoritos--> 
+    <div class="noFavToSeeContainer">
+        <div class="noFavToSee">
+            <p>No posts to see here.<br>Press <img src="Assets/FavouriteButton.svg" id="favIconDisplay"> under a post<br>to add it on here </p>
+        </div>
+    </div>
+    
+<!--ecrã dos Favoritos-->
+    <div class="favouritePosts" id="favPosts"></div>
+    
+
+<!--ACCOMMODATION Subcategorias Platorms e Posts-->
+    <div class="accommodationUI">
+        <div class="accommodationSubCategory" id="accPlatforms">platforms</div>
+        <div class="accommodationSubCategory" id="accPosts">posts</div>
+    </div>
+    
+<!--ecrã das Plataformas de ACCOMMODATION-->
+    <div class="accommodationPlatforms">
+<!--
+        <div class="crossBoxACC">
+                <img src="Assets/Cross.svg" id="crossACC">
+        </div>
+-->
+        <p>Here you can find a list with some of the most used Room Renting platforms in Portugal.<br>Let’s get you that room you've been looking for</p>
+        <ul>
+            <li>Idealista</li>
+            <li>BQUARTO</li>
+            <li>UniPlaces</li>
+            <li>Imovirtual</li>
+            <li>Casa Sapo</li>
+            <li>CustoJusto</li>
+            <li>Spotahome</li>
+            <li>HousingAnywhere</li>
+        </ul>
+    </div>
+    
+    
+    
+    
+    
+<!--GRI Subcategorias Office, Contacts e Guide-->
+    <div class="griUI">
+        <div class="griSubCategory" id="griOffice">Office</div>
+        <div class="griSubCategory" id="griContacts">Contacts</div>
+        <div class="griSubCategory unavailable" id="griGuide">Guide</div>
+    </div>
+    
+<!--GRI subcategoria OFFICE-->  
+    <div class="officeGRI">
+        <div class="Fernanda">Fernanda Xavier <span>Agreements and Mobility</span></div>
+        <div class="textAreaGRI" id="tapOutside">
+            <textarea placeholder="Write your message here" class="newGRImessage" id="mensagemGRI"></textarea>
+           
+             <textarea placeholder="Write your message here" class="newGRImessage2" id="mensagemGRI2"></textarea>
+            <button class="enviarGRI" id="enviarGRImessage">send</button>
+             <p id="time">time</p>
+        </div>
+    </div>
+    
+    <img src="Assets/keyboard.PNG" class="keyboard">
+    
+    
+<!--GRI subcategoria CONTACTOS-->
+    <div class="contactsGRI">
+        <h2>Contacts</h2>
+        <div class="contactsComponent">
+            <p class="contactName">FACULTY OF FINE ARTS<br>UNIVERSITY OF PORTO</p>
+            <p class="contactNumber">+351 225 192 400</p>
+            <p class="contactMail">expediente@fba.up.pt</p>
+        </div>
+        <div class="contactsComponent">
+            <p class="contactName">ACADEMIC SERVICES</p>
+            <p class="contactNumber">+351 225 192 412</p>
+            <p class="contactSubName">Undergraduate Center</p>
+            <p class="contactMail">licenciaturas@fba.up.pt </p>
+            <p class="contactSubName">Post-Graduation Center</p>
+            <p class="contactMail">posgraduacao@fba.up.pt </p>
+            <p class="contactSubName">International Relations Center</p>
+            <p class="contactNumber">+351 225 192 427</p>
+            <p class="contactMail">world@fba.up.pt</p>
+        </div>
+        <div class="contactsComponent">
+            <p class="contactName">CONTINUING TRAINING OFFICE</p>
+            <p class="contactNumber">+351 225 192 416</p>
+            <p class="contactMail">formcontinua@fba.up.pt </p>
+        </div>
+        <div class="contactsComponent">
+            <p class="contactName">TREASURY*</p>
+             <p class="contactNote">*The service is face-to-face and obeys the prior appointment made by e-mail</p>
+            <p class="contactMail">treasury.fbaup@sp.up.pt</p>
+        </div>
+        <div class="contactsComponent">
+            <p class="contactName">FINANCIAL SERVICE*</p>
+            <p class="contactNote">*Service takes place by email or phone</p>
+            <p class="contactNumber">+351 225 192 414</p>
+            <p class="contactMail">jmoraisc@fba.up.pt</p>
+        </div>
+        <div class="contactsComponent">
+            <p class="contactName">MUSEUM AND EXHIBITION OFFICE</p>
+            <p class="contactNumber">+351 225 192 415</p>
+            <p class="contactMail">lnunes@fba.up.pt</p>
+        </div>
+        <div class="contactsComponent">
+            <p class="contactName">i2ADS - Institute of Research in Art, Design and Society</p>
+            <p class="contactNumber">+351 225 192 429<br>+351 225 192 418</p>
+            <p class="contactMail">i2ads@fba.up.pt </p>
+        </div>
+        <div class="contactsComponent">
+            <p class="contactName">COMMUNICATION SERVICE</p>
+            <p class="contactNumber">+351 220 425 627</p>
+            <p class="contactMail">srp@fba.up.pt </p>
+        </div>
+        <div class="contactsComponent">
+            <p class="contactName">COMPUTER SYSTEMS CORE</p>
+            <p class="contactNumber">+351 225 192 419</p>
+            <p class="contactMail">helpdesk@fba.up.pt </p>
+        </div>
+    </div>
+    
+    
+    
+<!--PORTUGUESE category-->
+    <div class="portugueseUI">
+         <h2>Portuguese</h2>
+        <div class="portugueseComponents">
+            <img src="Assets/sound.svg" class="soundIcon" id="OlaSoundIcon">
+            <p class="wordEN">Olá</p>
+            <p class="wordPT">Hello</p>
+            <audio id="audioOLA" src="Audio/ola.m4a"Z></audio>
+        </div>
+        <div class="portugueseComponents">
+            <img src="Assets/sound.svg" class="soundIcon" id="">
+            <p class="wordEN">Adeus</p>
+            <p class="wordPT">Goodbye</p>
+        </div>
+        <div class="portugueseComponents">
+            <img src="Assets/sound.svg" class="soundIcon" id="">
+            <p class="wordEN">Por favor</p>
+            <p class="wordPT">Please</p>
+        </div>
+        <div class="portugueseComponents">
+            <img src="Assets/sound.svg" class="soundIcon" id="">
+            <p class="wordEN">Obrigado</p>
+            <p class="wordPT">Thank you</p>
+        </div>
+        <div class="portugueseComponents">
+            <img src="Assets/sound.svg" class="soundIcon" id="">
+            <p class="wordEN">De nada</p>
+            <p class="wordPT">You're welcome</p>
+        </div>
+        <div class="portugueseComponents">
+            <img src="Assets/sound.svg" class="soundIcon" id="">
+            <p class="wordEN">Sim</p>
+            <p class="wordPT">Yes</p>
+        </div>
+        <div class="portugueseComponents">
+            <img src="Assets/sound.svg" class="soundIcon" id="">
+            <p class="wordEN">Não</p>
+            <p class="wordPT">No</p>
+        </div>
+        <div class="portugueseComponents">
+            <img src="Assets/sound.svg" class="soundIcon" id="">
+            <p class="wordEN">Bom dia</p>
+            <p class="wordPT">Good morning</p>
+        </div>
+        <div class="portugueseComponents">
+            <img src="Assets/sound.svg" class="soundIcon" id="">
+            <p class="wordEN">Boa tarde</p>
+            <p class="wordPT">Good afternoon</p>
+        </div>
+        <div class="portugueseComponents">
+            <img src="Assets/sound.svg" class="soundIcon" id="">
+            <p class="wordEN">Boa noite</p>
+            <p class="wordPT">Good night</p>
+        </div>
+        <div class="portugueseComponents">
+            <img src="Assets/sound.svg" class="soundIcon" id="">
+            <p class="wordEN">Tudo bem?</p>
+            <p class="wordPT">How are you?</p>
+        </div>
+        <div class="portugueseComponents">
+            <img src="Assets/sound.svg" class="soundIcon" id="">
+            <p class="wordEN">Prazer em conhecer-te</p>
+            <p class="wordPT">Nice to meet you</p>
+        </div>
+    </div>
+    
+    
+    
+    
+   
+    
+    
+    
+    <div class="hideBar"></div>
+        
+    
+   
+</body>
+</html>

@@ -1,0 +1,821 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@font-face {
+  font-family: Bergen Bold;
+  src: url(../Font/BergenText-Bold.woff);
+    font-weight: 100;
+}
+
+@font-face {
+  font-family: Bergen Bold Italic;
+  src: url(../Font/BergenText-BoldItalic.woff);
+}
+
+@font-face {
+  font-family: Bergen Italic;
+  src: url(../Font/BergenText-Italic.woff);
+}
+
+@font-face {
+  font-family: Bergen;
+  src: url(../Font/BergenText-Regular.woff);
+}
+
+@font-face {
+  font-family: Bergen Semibold;
+  src: url(../Font/BergenText-SemiBold.woff);
+}
+
+@font-face {
+  font-family: Bergen Semibold Italic;
+  src: url(../Font/BergenText-SemiBoldItalic.woff);
+}
+
+
+
+html{
+/*    background-color: #151515;*/
+/*
+    width: 50px;
+    background-image: url(../Assets/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+*/
+}
+
+.fundo{
+    position: fixed;
+    top:0;
+    left:0;
+    height: 100vh;
+    width: 100vw;
+    z-index: -2;
+}
+
+.backArrow{
+    position: fixed;
+    top: 19px;
+    left: 15px;
+    height: 25px;
+    z-index: 4;
+    display: none;
+}
+
+/*Esconder Barr Scroll*/
+body::-webkit-scrollbar {
+    display: none;
+    width: 0 !important;
+     background: transparent; 
+}
+
+.unavailable{
+    opacity:0.2;
+}
+
+.opened{
+    
+}
+
+/*Barra Topo — iPhone*/
+.topBar{
+    content: '';
+    width: 101%;
+    overflow: hidden;
+    height: 50px;
+    background-color:black;
+    position: fixed;
+    z-index: 3;
+    top:0;
+    left:0;  
+}
+
+
+/*Barra com o Logo*/
+.appTitle{
+    display: none; 
+    position: fixed;
+    z-index: 3;
+    height: 65px;
+    background-color: #151515;
+    width: 100%;
+    left:0;
+    top:-100px;
+    
+    box-shadow: 0 0px 20px rgba(0, 0, 0, 1);
+}
+
+.appTitleAnim {
+    animation: appTitleAnim 1600ms forwards 200ms;
+    transition: ease;
+}
+
+@keyframes appTitleAnim {
+    0% {
+    }
+    100% {
+        top:0px;   
+    }
+}
+
+
+/*Logo*/
+#logo{
+/*
+    width: 40px;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;   
+*/
+}
+
+
+/*Contentor geral com HOT TOPICS*/
+.hotTopicsContainer{
+    display:none;
+    height: 275px;
+    background-color: #1C1C1C;
+    position: absolute;
+    left:0;
+    top:65px;
+    box-shadow: 0 0px 20px rgba(0, 0, 0, 1);
+    z-index: 1;
+}
+
+
+/*HOT TOPICS text*/
+#hotTopics{  
+    opacity: 0;
+    color:white;
+    text-transform: uppercase;
+    color:#9A9A9A;
+    font-family: 'Archivo', sans-serif;    
+    font-weight: 800;
+    margin-left:30px;
+    padding-top: 10px;
+    font-size:16px;
+    letter-spacing: 1px;
+    position: sticky;
+}
+
+
+
+/*Scrollable Wrapper*/
+.scrollTopicsContainer{
+    overflow: scroll;
+    width: 100vw;
+    height: 235px;  
+    
+}
+/* hide scrollbar on Scrollable Wrapper*/
+.scrollTopicsContainer::-webkit-scrollbar {width: 0 !important }
+
+/*Hot Topics Posts GROUP*/
+.insideScrollTopicsContainer{
+    width: 773px;
+    margin-left:-400px;
+    opacity:0;
+}
+
+/*ANIMAÇÃO do Hot Topics Posts GROUP*/
+.hotTopicsAnim{
+    animation: hotTopicsAnim 1600ms forwards 900ms;
+    transition: ease;
+}
+@keyframes hotTopicsAnim {
+    0% {}
+    100% {
+        opacity:1;
+        margin-left:00px
+    }
+}
+
+
+/*Hot Topics Post*/
+.hotTopicContent{
+    width: 45vw;
+    font-family: 'Archivo', sans-serif; 
+    box-shadow: 0 3px 10px rgb(0 0 0 / 4.2);
+    border-radius:15px;
+    margin-left:3vw;
+   
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+
+.topicCategory{
+    background-color: white;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    text-transform: uppercase;
+    font-family: 'Bergen Bold'; 
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    height: 20px;
+}
+
+.hotTopicImage{
+    width: 100%;
+    height:70px;
+    float:left;
+    display: block;
+    object-fit: cover;
+}
+
+.topicText{
+    padding:10px;
+    margin-top:70px;
+}
+
+.topicTitle{
+    font-size: 15px;
+    color:white;
+    margin:0;
+}
+
+.topicPostText{
+    color:white;
+    font-size: 12px;
+    font-family: 'Archivo', sans-serif; 
+    font-weight: 100;
+    margin:0;
+    margin-top:5px;
+    line-height: 15px;
+}
+
+
+.categoriasContentor{
+    display:none;    
+    margin-top: 100px;
+    width:100vw;
+    text-align: center;
+    position: absolute;
+    margin: auto;
+/*    top: -400px;*/
+/*    top: -100px;*/
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+/*    padding-top: 10px;*/
+    z-index: 0;
+    height:1300px;
+}
+
+/*Esconder Barr Scroll*/
+.categoriasContentor::-webkit-scrollbar {
+  display: none;
+    width: 0 !important;
+     background: transparent; 
+}
+
+.categorias{
+    margin: 5px 4px;
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    color: white;
+    width: 45%;   
+    transition: all .3s ease-in-out;
+}
+
+.estrelaFav{
+    position: absolute;
+    top: 5%;
+    right:5%;    
+}
+
+.tituloCategoria{
+    pointer-events: none;
+    font-size: 16px;
+    font-family: 'Bergen Bold'; 
+    font-weight: 100;
+    text-transform: uppercase;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/*Esconder Barr Scroll*/
+.categoriasAnim::-webkit-scrollbar {
+  display: none;
+    width: 0 !important 
+}
+
+/*ANIMAÇÃO do Logo*/
+.categoriasAnim{
+    animation: categoriasAnim 2100ms forwards 200ms;
+    transition: ease;
+}
+/*
+@keyframes categoriasAnim {
+    0% {}
+    100% {
+        top:1170px;
+    }
+}
+*/
+
+@keyframes categoriasAnim {
+    0% {}
+    100% {
+        top:1200px;
+    }
+}
+
+
+.imagemCategoria{
+    width: 100%;
+}
+
+.hideBar{
+    display:none;
+    content: '';
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    height:40px;
+    background-color: #151515;
+}
+
+/*Menu Inferior*/
+#bottomMenu{
+    display:none;
+    width: 95%;
+    position: fixed;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top:105vh;
+    z-index: 4;
+}
+
+/*ANIMAÇÃO menu inferior*/
+.bottomMenuAnim{
+    animation: bottomMenuAnim 1600ms forwards 400ms;
+    transition: ease;
+}
+
+@keyframes bottomMenuAnim {
+    0% {
+    }
+   
+    100% {
+        top:89vh;
+    }
+}
+
+/*animação do menu sair do ecrão quando sobe o teclado*/
+.menuOutAni{
+   animation: menuOutAni 700ms backwards 00ms;
+    transition: ease;
+}
+
+@keyframes menuOutAni {
+    0% {
+         top:89vh;
+    }
+   
+    100% {
+        top:100vh;
+    }
+}
+
+.menuIcon{
+    display:none;
+    position: fixed;
+    bottom: 40px;
+    z-index: 4;
+}
+
+#homeIcon{
+    left:40px;
+}
+
+#favouritesIcon{
+    left:100px;
+}
+
+#searchIcon{
+    right:100px;
+}
+
+#profileIcon{
+    right:40px;
+}
+
+
+/*Botão '+'*/
+.plusIcon{
+    -webkit-transform: translate3d(0,0,0);
+    display:none;
+    position: fixed;
+    left: 0;
+    right:0;
+    margin: auto;
+    top:83vh;
+    z-index: 5;
+}
+
+
+/*New Button for POST*/
+.circleAnimation{
+    position: fixed;
+    width: 64px;
+    height: 64px;
+    background-color: rgba(255,255,255,1);
+    box-shadow: 0px 0px 18px 0px rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    left: 0;
+    right: 0;
+    margin: auto;
+   top:85vh;
+    z-index: 5;
+    display: none;
+}
+
+/*ANIMAÇÃO menu inferior*/
+.circleToSquareAnim{
+    animation: circleToSquareAnim 1600ms forwards 200ms;
+    transition: ease;
+}
+
+@keyframes circleToSquareAnim {
+    0% {
+        background-color:rgba(255,255,255,1);
+        -webkit-backdrop-filter: blur(0px);
+        backdrop-filter: blur(0px);
+        top:85vh;
+    }
+   
+    100% {
+        border-radius:5%;
+        top:15vh;
+        width: 85vw;
+        height: 500px;
+        box-shadow: 0px 0px 0px 0px;
+        background-color:rgba(255,255,255,0.02);
+        -webkit-backdrop-filter: blur(20px);
+        backdrop-filter: blur(20px);
+        box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.5);
+    }
+}
+
+
+/*Aniamção Quadrado para Circulo*/
+.squareToCircleAnim{
+    animation: squareToCircleAnim 1000ms backwards 200ms;
+    transition: ease;
+}
+
+@keyframes squareToCircleAnim {
+    0% {
+       border-radius:5%;
+         top:15vh;
+        width: 85vw;
+        height: 500px;
+        z-index: 4;
+        box-shadow: 0px 0px 0px 0px;
+        background-color:rgba(255,255,255,0.02);
+        -webkit-backdrop-filter: blur(20px);
+        backdrop-filter: blur(20px);
+        box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.5);
+    }
+   
+    100% {
+ position: fixed;
+    width: 64px;
+    height: 64px;
+    background-color: rgba(255,255,255,1);
+    box-shadow: 0px 0px 18px 0px rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top:85vh;
+    z-index: 4;
+    display: none;
+    }
+}
+
+
+.lightBoxEffect{
+    content: '';
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    background-color:rgba(0,0,0,0.6);
+    display: none;
+    z-index: 4;
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+}
+
+
+.searchBarContainer::-webkit-scrollbar {
+  display: none;
+    width: 0 !important 
+}
+
+.searchBarContainer{
+    display: none;
+    position: fixed;
+    width: 90vw;
+    height: 60px;
+    border-radius: 20px;
+    left: 0;
+    right: 0;
+    margin: auto;
+/*    bottom: 320px;*/
+    bottom: 150px;
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    z-index: 5;
+    box-shadow: 0px 0px 18px 0px rgba(255, 255, 255, 0.2);
+}
+
+
+.whiteSearchIcon{
+    left:20px;
+    top:8px;
+    position: relative;
+}
+
+.searchBar{
+    background-color: transparent;
+    width: 70%;
+    margin-left: 35px;
+    height: 30px;
+    margin-top: 13px;
+    border: none;
+    border-bottom: 1px solid white;
+    color:white;
+    font-size: 18px;
+    font-family: 'Archivo', sans-serif; 
+    font-weight: 100;
+}
+
+
+.mausHabitosSearchPostsContainer{
+    display: none;
+    width: 100vw;
+    margin: auto;
+    align-content: center;
+    z-index: 2;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top:-500px;
+    height: 56vh;
+    overflow: scroll;
+    padding-bottom: 200px;
+}
+
+.MausHabitosPost:nth-last-child(1){
+    margin-bottom: -70px;
+}
+
+.MausHabitosPost:nth-child(1){
+    margin-top: 20px;
+}
+
+/*Esconder Barr Scroll*/
+.mausHabitosSearchPostsContainer::-webkit-scrollbar {
+  display: none;
+    width: 0 !important 
+}
+
+
+.mausHabitosPostAnim{
+   animation: mausHabitosPostAnim 1600ms forwards 200ms;
+    transition: ease;
+}
+@keyframes mausHabitosPostAnim {
+    0% {
+        height: 0vw;
+        opacity: 0;
+    }
+    100% {
+       top:140px;
+        height: 56vh;
+        opacity: 1;
+    }
+}
+
+.mausHabitosPostAnimBack{
+   animation: mausHabitosPostAnimBack 1600ms backwards 200ms;
+    transition: ease;
+}
+@keyframes mausHabitosPostAnimBack {
+    0% {
+     top:140px;
+    }
+    100% {
+       top:1040px;
+       
+        opacity: 0;
+    }
+}
+
+
+.MausHabitosPost{
+    position: relative;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 80%;
+    font-family: 'Archivo', sans-serif; 
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    background-color: rgba(255,255,255, 0.05);
+    border-radius: 20px;
+    padding-bottom: 40px;
+    margin-bottom: 30px;
+    box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.6);
+}
+
+.noFavToSee{
+    width: 300px;
+    height: 120px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+.noFavToSeeContainer{
+    display:none;
+}
+
+.noFavToSee p {
+      font-family: 'Archivo', sans-serif; 
+    font-weight: 100;
+    font-size: 20px;
+    color:white;
+    opacity: 0.6;
+    text-align: center;
+    line-height: 35px;
+    align-content: center;
+    vertical-align: baseline;
+}
+
+#favIconDisplay{
+margin: 0 5px;
+    display: inline-block;
+    align-content: center;
+}
+/*ecra de favoritos*/
+.favouritePosts{
+    display: none;
+  top:-500px;
+    position: absolute;
+    left: 0;
+}
+
+div.favouritePosts div.MausHabitosPost:last-child {
+   margin-bottom: 150px;
+}
+
+/*ecra animação de favoritos*/
+.favouritePostsAnim{
+   animation: favouritePostsAnim 1600ms forwards 200ms;
+    transition: ease;
+}
+@keyframes favouritePostsAnim {
+    0% {
+        top:-500px;
+        height: 0vw;
+        opacity: 0;
+    }
+    100% {
+        top:80px;
+        opacity: 1;
+    }
+}
+
+
+/*ecra animação de favoritos*/
+.favouritePostsAnimBack{
+    animation: favouritePostsAnimBack 1600ms backwards 200ms;
+    transition: ease;
+}
+@keyframes favouritePostsAnimBack {
+    0% {
+        top:80px;
+
+    }
+    100% {
+        top:800px;
+        opacity: 0;
+    }
+}
+
+
+
+
+
+.categoriaPost{
+    color:black;
+    line-height: 30px;
+    height:30px;
+    text-align: center;
+    font-size: 14px;
+    font-family: 'Bergen Bold'; 
+    font-weight: 100;
+    text-transform: uppercase;
+    background-color: white;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+   
+}
+
+.imagemPost{
+    width: 100%;
+}
+
+.tituloPost{
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+    padding: 0 20px;
+    margin-bottom: 0;
+}
+
+.mensagemPost{
+    margin-top: 5px;
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 200;
+    color: white;
+    padding: 0 20px;
+}
+
+.dataPost{
+    margin-top: 5px;
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 200;
+    color: white;
+    padding: 0 20px;
+    opacity: 0.6;
+}
+
+.commentsContainer{
+     width: 49.5%;
+    float: left;
+    text-align: center;
+    height: 40px;
+     line-height: 40px;
+    align-content: center;
+    color: white;
+    font-size: 12px;
+    border-bottom-left-radius: 20px;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    background-color: rgba(255,255,255, 0.05);
+}
+
+#commentIcon{
+    margin-bottom: -5px;
+    margin-right: 5px;
+}
+
+.likePostContainer{
+       
+    width: 49.5%;
+    float: right;
+    text-align: center;
+    height: 40px;
+    line-height: 50px;
+     border-bottom-right-radius: 20px;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    background-color: rgba(255,255,255, 0.05);
+}
+
+
+/*animação de favorito*/
+.favIconAnim{
+    animation: favIconAnim 600ms forwards 00ms;
+    transition: ease;
+}
+
+@keyframes favIconAnim {
+    0% {
+       
+    }
+    50%{
+        transform: scale(1.2) rotate(12deg);
+    }
+    100% {
+        
+    }
+}

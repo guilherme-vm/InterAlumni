@@ -1,0 +1,465 @@
+/*Ecrã com as 2 subcategorias de ACCOMMODATION*/
+.griUI{  
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    align-content: center;
+    width: 80vw;
+    margin-top: -30px;
+    height: 75vh;
+    overflow: hidden;
+     display: none;
+}
+
+/*subcategorias de ACCOMMODATION*/
+.griSubCategory{
+    color:white;
+    width: 100%;
+    height: calc(33% - 40px);
+    margin: 30px 0px;
+    border-radius: 30px;
+    font-size: 35px;
+    font-family: 'Bergen Bold'; 
+    font-weight: 100;
+    text-transform: uppercase;
+    text-align: center;
+    line-height:170px
+}
+
+/*subcategoria de Office*/
+#griOffice{
+    background-image: url(../Assets/griOffice.png);
+opacity:0;
+}
+/*subcategoria de Contacts*/
+#griContacts{
+    background-image: url(../Assets/griContacts.png);
+opacity:0;
+}
+/*subcategoria de Guide*/
+#griGuide{
+    background-image: url(../Assets/griGuide.png);
+opacity:0;
+}
+
+
+/*SAIR ANIMAÇÃO do ecrã das subcategorias*/
+.griUIAnim{
+    animation: griUIAnim 2100ms forwards 200ms;
+    transition: ease;
+}
+
+@keyframes griUIAnim {
+    0% {
+        top: 50%;
+    }
+    100% {
+        top:140%;
+        opacity: 0;
+    }
+}
+
+
+
+/*ENTRAR ANIMAÇÃO do ecrã das subcategorias*/
+.griUIAnimBack{
+    animation: griUIAnimBack 2100ms backwards 200ms;
+    transition: ease;
+}
+
+@keyframes griUIAnimBack {
+    0% {
+        top:140%;
+        opacity: 0;}
+    100% {
+        
+    }
+}
+
+
+
+
+
+
+.contactsGRI{
+    width: 80vw;
+    position: fixed;
+    height: 85vh;
+    overflow-y: scroll;
+    padding: 0px 32px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: 0;
+    color:white;
+    font-family: 'Archivo', sans-serif; 
+    top:65px;
+    display: none;
+    opacity: 0;
+}
+
+
+
+/*SAIR ANIMAÇÃO do ecrã das subcategorias*/
+.contactsGRIanim{
+    animation: contactsGRIanim 2100ms forwards 200ms;
+    transition: ease;
+}
+
+@keyframes contactsGRIanim {
+    0% {
+        height: 5vh;
+        opacity: 0;
+        top:-400px;
+    }
+    100% {
+        top:65px;
+        height: 87vh;
+        opacity: 1;
+    }
+}
+
+
+
+/*ENTRAR ANIMAÇÃO do ecrã das subcategorias*/
+.contactsGRIanimBack{
+    animation: contactsGRIanimBack 2100ms backwards 200ms;
+    transition: ease;
+}
+
+@keyframes contactsGRIanimBack {
+    0% {top:65px;
+        height: 87vh;
+        opacity: 1;}
+
+    100% {
+         top:1000px;
+       
+        opacity: 0;
+    }
+}
+
+
+
+
+
+/*VOLTAR ATRAS ANIMAÇÃO GRI ————— CONTACTOS*/
+.contactsGRIbackArrowAnim{
+    animation: contactsGRIbackArrowAnim 2100ms backwards 200ms;
+    transition: ease;
+}
+
+@keyframes contactsGRIbackArrowAnim {
+    0% {top:65px;
+        height: 87vh;
+        opacity: 1;
+         }
+
+    100% {
+        top:-1000px;
+       
+        opacity: 0;
+        
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+/*Esconder Barr Scroll*/
+.contactsGRI::-webkit-scrollbar {
+  display: none;
+    width: 0 !important 
+}
+
+.contactsGRI h2{
+    margin-top:50px;
+    font-weight: 100;
+    font-size: 30px;
+    letter-spacing: 0.2px;
+    text-align: center;
+}
+
+.contactsComponent{
+    -webkit-backdrop-filter: blur(30px);
+    backdrop-filter: blur(30px);
+     box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+    padding-left: 15px;
+    padding-bottom: 5px;
+}
+
+.contactsComponent:last-child{
+    margin-bottom: 100px;
+}
+
+.contactSubName{
+    margin-top:10px;
+    margin-bottom: 2px;
+}
+
+/*Nome do contacto*/
+.contactName{
+    font-size: 18px;
+    padding-top: 20px;
+    font-weight: 700;
+}
+
+/*numero de telemovel*/
+.contactNumber{
+    font-size: 16px;
+    margin-top:0px;
+     text-decoration: underline;
+    font-weight: 100;
+}
+
+/*e-mail*/
+.contactMail{
+    font-size: 12px;
+    font-size: 16px;
+    font-weight: 100;
+    margin-top:-0px;
+    opacity: 0.6;
+    text-decoration: underline;     
+}
+
+/*notas*/
+.contactNote{
+    font-size: 12px;
+    margin-top:-15px;
+    opacity: 0.6;
+    font-weight: 100;
+}
+
+
+
+.closeOnTap{
+    
+}
+
+/*
+.pushDown{
+    animation: pushDown 2100ms forwards 200ms;
+    transition: ease;
+}
+
+@keyframes pushDown {
+    0% {
+     
+      
+    }
+    100% {
+       top:89%;
+    }
+}
+*/
+
+
+
+
+
+
+.keyboard{
+    width: 100vw;
+    position: fixed;
+    left: 0;
+    bottom:0;
+    z-index: 0;
+    display: none;
+}
+
+
+.Fernanda{
+    display: none;
+    position: fixed;
+    width: 100%;
+    top: 65px;
+    background-color: #1C1C1C;
+    left: 0;
+    color:white;
+    height: 60px;
+    font-size: 22px;
+    line-height: 20px;
+    font-family: 'Archivo', sans-serif; 
+    font-weight: 100;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.Fernanda span{
+    display: block;
+    font-size: 14px;
+    opacity: 0.5;
+    margin-top: 2px;
+}
+
+
+
+/*div com mensagem e botao de enviar*/
+.textAreaGRI{
+    width: 100vw;
+    height: 100px;
+    position: fixed;
+    bottom: 0px;
+    left: 0;
+    z-index: 1;
+    display: none;  
+
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+
+/*Esconder Barr Scroll*/
+.textAreaGRI::-webkit-scrollbar {
+  display: none;
+    width: 0 !important 
+}
+
+/*SAIR ANIMAÇÃO do ecrã das subcategorias*/
+.textAreaGRIanim{
+     animation: textAreaGRIanim 2100ms forwards 200ms;
+    transition: ease;
+}
+
+
+
+@keyframes textAreaGRIanim {
+    0% {
+        bottom: 0px;
+      
+    }
+    100% {
+       bottom:150px;
+    }
+}
+
+
+/*SAIR ANIMAÇÃO do ecrã das subcategorias*/
+.textAreaGRIanim2{
+     animation: textAreaGRIanim2 2100ms forwards 200ms;
+    transition: ease;
+}
+
+@keyframes textAreaGRIanim2 {
+    0% {
+      bottom:150px;
+      
+    }
+    100% {
+       bottom:10px;
+    }
+}
+
+
+.textAreaGRIanimBack{
+    
+}
+
+
+/*Espaço mensagem*/
+.newGRImessage, .newGRImessage2{
+    background-color: transparent;
+    color:white;
+    -webkit-backdrop-filter: blur(30px);
+    backdrop-filter: blur(30px);
+     box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.3);
+    font-size: 17px;
+    line-height: 20px;
+    font-family: 'Archivo', sans-serif; 
+    font-weight: 100;
+    border: none;
+    border-radius: 10px;
+    width: calc(80% - 50px);
+    float: left;
+    height:  calc(100% - 20px);
+    padding: 10px;
+    color: white; 
+    resize: none;
+    right: 95px;
+    bottom:0px;
+    position: absolute;
+}
+
+.newGRImessage2{
+    top: 250px;
+}
+
+/*animação da mensagem*/
+.newGRImessage2Anim{
+    animation: newGRImessage2Anim 2100ms forwards 200ms;
+    transition: ease;
+}
+@keyframes newGRImessage2Anim {
+    0% {
+          top: 150px;
+    }
+    100% {
+         top: 0px;
+    }
+}
+
+
+.newGRImessage::placeholder, .newGRImessage2::placeholder{
+    color:white;
+}
+
+/*Botao enviar mensagem*/
+.enviarGRI{
+    width: 20%;
+    float: right;
+    margin-right: 10px;
+    height: 100%;
+    border-radius: 10px;
+    background-color: rgba(0,0,0,0.5);
+    border:none;
+    color:white;
+    font-family: 'Archivo', sans-serif; 
+    font-weight: 700;
+    text-transform: uppercase;
+     -webkit-backdrop-filter: blur(30px);
+    backdrop-filter: blur(30px);
+     box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.3);
+}
+
+
+/*animação da mensagem*/
+.mensagemAnim{
+    animation: mensagemAnim 2100ms forwards 200ms;
+    transition: ease;
+}
+@keyframes mensagemAnim {
+    0% {
+        bottom: 0px;   
+    }
+    100% {
+        bottom:570px;
+        right: 10px;
+       
+    }
+}
+
+#time{
+    display: none;
+    text-align: right;
+    color:white;
+    bottom: 535px;
+    position: fixed;
+    font-family: 'Archivo', sans-serif; 
+    font-weight: 100;
+    font-size: 12px;
+    letter-spacing: 0.4px;
+    opacity: 0.4;
+    right: 10px;
+}

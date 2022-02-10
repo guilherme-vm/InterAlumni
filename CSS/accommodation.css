@@ -1,0 +1,189 @@
+/*Ecrã com as 2 subcategorias de ACCOMMODATION*/
+.accommodationUI{  
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    align-content: center;
+    width: 80vw;
+     display: none;
+    margin-top: -30px;
+}
+
+/*subcategorias de ACCOMMODATION*/
+.accommodationSubCategory{
+    color:white;
+    width: 100%;
+    height: 250px;
+    margin: 50px 0px;
+    border-radius: 30px;
+    font-size: 35px;
+    font-family: 'Bergen Bold'; 
+    font-weight: 100;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 250px;
+}
+
+/*subcategoria de Plataformas*/
+#accPlatforms{
+    background-image: url(../Assets/accPlatforms.jpg);
+    opacity:0;
+}
+/*subcategoria de Posts*/
+#accPosts{
+    background-image: url(../Assets/accPosts.jpg);
+    opacity:0;
+}
+
+/*SAIR ANIMAÇÃO do ecrã das subcategorias*/
+.accommodationUIanim{
+    animation: accommodationUIanim 2100ms forwards 200ms;
+    transition: ease;
+}
+
+@keyframes accommodationUIanim {
+    0% {
+        top: 50%;
+    }
+    100% {
+        top:140%;
+        opacity: 0;
+    }
+}
+
+/*ENTRAR ANIMAÇÃO do ecrã das subcategorias*/
+.accommodationUIanimBack{
+    animation: accommodationUIanimBack 2100ms backwards 200ms;
+    transition: ease;
+}
+
+@keyframes accommodationUIanimBack {
+    0% {
+        top:140%;
+        opacity: 0;}
+    100% {
+        
+    }
+}
+
+/*ENTRAR ecrã de PLATAFORMAS de ACCOMMODATION*/
+.accommodationPlatforms{
+    position: absolute;
+    left: 50%;
+    top: -20%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    align-content: center;
+    width: 80vw;
+    border-radius: 20px;
+    margin-top: -30px;
+    font-family: 'Archivo', sans-serif; 
+    color:white;
+    background-color:rgba(255,255,255,0.02);
+    -webkit-backdrop-filter: blur(30px);
+    backdrop-filter: blur(30px);
+    box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    display: none;
+}
+
+
+.accommodationPlatformsAnim{
+    animation: accommodationPlatformsAnim 2100ms forwards 200ms;
+    transition: ease;
+}
+
+@keyframes accommodationPlatformsAnim {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity:1;
+        top: 50%;
+    }
+}
+
+/*SAIR ecrã de PLATAFORMAS de ACCOMMODATION*/
+.accommodationPlatformsAnimBack{
+    animation: accommodationPlatformsAnimBack 2100ms backwards 200ms;
+    transition: ease;
+}
+
+@keyframes accommodationPlatformsAnimBack {
+    0% {
+        opacity:1;
+        top:50%
+        
+    }
+    100% {
+        opacity: 0;
+        top: -20%;
+    }
+}
+
+/*HOME RETURN SAIR ecrã de PLATAFORMAS de ACCOMMODATION*/
+.accommodationPlatformsAnimReturn{
+    animation: accommodationPlatformsAnimReturn 2100ms backwards 200ms;
+    transition: ease;
+}
+
+@keyframes accommodationPlatformsAnimReturn {
+    0% {
+        opacity:1;
+        top: 50%;
+    }
+    100% {
+        opacity:0;
+        top: 150%;
+    }
+}
+
+
+.accommodationPlatforms p{
+    margin: 30px auto;
+    color:white;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 100;
+    hyphens: auto;
+    width: 80%;
+}
+
+.accommodationPlatforms ul{
+  margin-bottom: 40px;
+    text-align: center;
+    padding: 0;
+}
+
+.accommodationPlatforms li{
+    font-size: 20px;
+    list-style-type: none;
+     font-weight: 100;
+    line-height: 35px;
+    text-decoration: underline;   
+}
+
+/*fechar lista de Plataformas*/
+.crossBoxACC{
+    margin-top: 15px;
+    right: 15px;
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 8px 4px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    background-color: rgba(255,255,255, 0.1);
+    position: absolute;
+    z-index: 5;
+}
+
+#crossACC{
+    top:0;
+    bottom: 0;
+    right:0;
+    left:0;
+    position: absolute;
+    margin: auto;
+}
